@@ -43,13 +43,12 @@ int Su();
 //그러하다
 int main2();
 
-int HPan();
+int HPan(int Hu, int Ai);
 
-int HHPan();
+int HHPan(int Hu, int Hu2);
 
-int APan();
-
-int H2Pan();
+int APan(int Hu, int Ai);
+int H2Pan(int Hu, int Hu2);
 
 typedef struct hero {
     short x;
