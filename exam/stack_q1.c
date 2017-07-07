@@ -9,7 +9,7 @@
  * A : MAX - 1
  * B : top++;
  * C : top == -1
- * D : top--; 인데 원래 삭제작업을 하려면 stack[top] = -1;도 해줘야됨
+ * D : top--;
  */
 
 #define MAX 5

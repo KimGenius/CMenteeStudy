@@ -17,7 +17,7 @@
 
 struct NODE {
     int data;
-    struct NODE *link; // a 10점
+    struct NODE *link; // a 10점 //다음 NODE를 가르켜야 되서 NODE형태로 *link로 포인터 변수를 선언함
 };
 
 struct NODE *front = NULL;
@@ -34,14 +34,14 @@ bool ADD(int data) {
     pNODE->data = data;
     pNODE->link = NULL;
 
-    if (count == 0) { // b 15점
+    if (count == 0) { // b 15점 //만약에 값이 없으면 rear랑 front모두 같은 값을 가르켜야 되니 값이 없는걸 체크하기 위해 count == 0인지 체크한다.
         rear = pNODE;
         front = pNODE;
     } else {
         rear->link = pNODE;
-        rear = pNODE;  // c 15점
+        rear = pNODE;  // c 15점 //위에서 원래 끝 값 링크에 새로운 데이터를 넣었으면 이제 원래 끝 값에 새로운 데이터를 넣어줘야함
     }
-    count++;  // d 15점
+    count++;  // d 15점 //
 }
 
 bool DELETE() {
@@ -50,7 +50,7 @@ bool DELETE() {
         return false;
     }
     struct NODE *pDelNODE = front;
-    front = front->link;  // e 15점
+    front = front->link;  // e 15점 //지우기 전에 처음 값을 그 다음 값으로 넣어줌
     free(pDelNODE);
     count--;
 
@@ -66,7 +66,7 @@ void PrintQ() {
     struct NODE *pNODE = front;
     while (pNODE != NULL) {
         printf(" %d ", pNODE->data);
-        pNODE = pNODE->link;  // f 15점
+        pNODE = pNODE->link;  // f 15점 //출력을 할 때에 다음 데이터를 가르키고 반복해야 하니 pNODE에 다음 링크의 값을 넣어줌
     }
     printf("\n");
 }

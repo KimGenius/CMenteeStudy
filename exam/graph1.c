@@ -9,7 +9,6 @@
 void main() {
     int G[SIZE][SIZE];
     int n, v, v1, v2;
-    int i, j;
 
     printf("\n 정점의 개수 입력 : ");
     scanf("%d", &n);
@@ -19,6 +18,7 @@ void main() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             G[i][j] = 0;
+//            정점 개수만큼 크기 만들어주는 초기화 작업
         }
     }
 
@@ -29,6 +29,7 @@ void main() {
         scanf("%d", &v2);
         G[v1 - 1][v2 - 1] = 1;
         G[v2 - 1][v1 - 1] = 1;
+        //서로의 좌표에 0이 아닌 1을 넣어서 연결됨을 표시함
     }
 
     printf("\n\n");
@@ -36,6 +37,7 @@ void main() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%5d", G[i][j]);
+            //값 전부 출력
         }
         printf("\n");
     }
