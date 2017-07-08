@@ -5,10 +5,10 @@ set(CMAKE_C_STANDARD 99)
 
 #set(SOURCE_FILES 3000.cpp)
 
-#set(SOURCE_FILES exam/stack1.c)
+set(SOURCE_FILES exam/stack1.c)
 #set(SOURCE_FILES exam/stack_q1.c)
 #set(SOURCE_FILES exam/queue_q1.c)
-set(SOURCE_FILES exam/tree.c)
+#set(SOURCE_FILES exam/tree.c)
 #set(SOURCE_FILES exam/list.c)
 #set(SOURCE_FILES exam/listQueue.c)
 #set(SOURCE_FILES exam/listqueue_q1.c)

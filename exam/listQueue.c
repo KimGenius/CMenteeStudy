@@ -47,6 +47,7 @@ bool DELETE(int *pdata) { //지워
     }
 
     *pdata = front->data; //앞의 값의 데이터를 넣어줌
+
     struct NODE *pDelNODE = front; //새로 지울 데이터를 담아줌
     front = front->link; //앞의 값을 한칸 당겨줌
     free(pDelNODE); //새로 지울 데이터 증발

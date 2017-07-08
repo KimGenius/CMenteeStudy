@@ -36,7 +36,11 @@ bool POP() {
 int main() {
     int i = 0;
     for (i = 0; i < 11; i++) {
-        PUSH((i + 1) * 10); //값을 넣어줘
+        if(PUSH((i + 1) * 10)) {
+            printf("잘 됨\n");
+        }else {
+            printf("안됨\n");
+        } //값을 넣어줘
     }
     for (int i = 0; i < 11; ++i) {
         POP(); //빼줌
