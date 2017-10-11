@@ -17,6 +17,7 @@ void quick_Sort(int a[], int left, int right) {
     int i, j, k, pivot;
     if (left < right) {
         i = left - 1;
+        j = right;
         pivot = a[right];
         do {
             do { i++; } while (a[i] < pivot);
@@ -24,12 +25,18 @@ void quick_Sort(int a[], int left, int right) {
             if (i < j)swap(&a[i], &a[j]);
 
             printf("step %d : ", ++m);
-            for (int k = 0; k < count; ++k) {
+            for (k = 0; k < count; ++k) {
                 printf("%d ", a[k]);
             }
+            printf("\n");
         } while (i < j);
-        printf("\n");
         swap(&a[right], &a[i]);
+        printf("중간점검 : ");
+        for (int i = 0; i < count; ++i) {
+            printf("%d ", a[i]);
+        }
+        printf("left : %d, right : %d, i : %d", left, right, i);
+        printf("\n");
         quick_Sort(a, left, i - 1);
         quick_Sort(a, i + 1, right);
     }

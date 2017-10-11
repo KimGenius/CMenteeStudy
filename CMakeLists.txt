@@ -47,6 +47,7 @@ set(CMAKE_C_STANDARD 99)
 #set(SOURCE_FILES motion.c)
 #set(SOURCE_FILES sort/bubble.c)
 #set(SOURCE_FILES sort/quick.c)
-set(SOURCE_FILES sort/select.c)
+set(SOURCE_FILES sort/insert.c)
+#set(SOURCE_FILES sort/select.c)
 
 add_executable(MenteeStudy ${SOURCE_FILES})

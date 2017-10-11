@@ -10,13 +10,13 @@ void Selection_Sort(int a[], int n) {
     for (i = 0; i < n - 1; ++i) {
         min = a[i];
         index = i;
-        for (j = i + 1; j < n; ++j) {
+        for (j = i + 1; j < n; ++j) { //지금 가리크는게 더 크면 더 작은수로 변환하고
             if (min > a[j]) {
                 min = a[j];
                 index = j;
             }
         }
-        a[index] = a[i];
+        a[index] = a[i]; // 적용
         a[i] = min;
         printf("step %d : ", i);
         for (int k = 0; k < n; ++k) {

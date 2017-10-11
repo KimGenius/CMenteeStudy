@@ -8,12 +8,12 @@ bubble_Sort(int a[], int n) {
     int i, j, k, temp;
     for (i = 1; i < n; i++) {
         for (j = 0; j < n - 1; j++) {
-            if (a[j] > a[j + 1]) {
+            if (a[j] > a[j + 1]) { //만약 앞에꺼가 뒤에꺼보다 크면 바꾸기
                 temp = a[j];
                 a[j] = a[j + 1];
                 a[j + 1] = temp;
             }
-        }
+        } //뒤에 모든 원소들을 비교
         printf("step %d : ", i);
         for (k = 0; k < n; k++) {
             printf("%d ", a[k]);
